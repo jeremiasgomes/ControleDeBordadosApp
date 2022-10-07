@@ -20,6 +20,7 @@ const Form = ({
 	const [tipo, setTipo] = useState("")
 	const [qtdPeca, setQtdPeca] = useState("")
 
+	
 	const listaTiboBordado = tipoBordado
 
 	let valorU = 0
@@ -27,6 +28,7 @@ const Form = ({
 
 
 	const handleSave = () => {
+		
 		if (listaTiboBordado === null) {
 			NotificationManager.warning('Primeiro cadastre um tipo de bordado!', 'Atenção')
 			
@@ -47,8 +49,9 @@ const Form = ({
 		}
 		
 		
+
 		listaTiboBordado?.filter(item => {
-			if (item.nome === tipo) {
+			if (item.nome.trim() === tipo.trim()) {
 				valorU = parseFloat(item.valor).toFixed(2)
 				totalP = parseFloat(item.valor * qtdPeca).toFixed(2)
 			}
