@@ -28,8 +28,8 @@ function bordadosPdf(bordadosDoMes, totalBodados) {
       { text: bordado.cliente, style: 'tableHeader', fontSize: 10, margin: [0, 0, 0, 2] },
       { text: bordado.tipo, style: 'tableHeader', fontSize: 10, margin: [0, 2, 0, 2], alignment:'center' },
       { text: bordado.qtd_peca, style: 'tableHeader', fontSize: 10, margin: [0, 2, 0, 2], alignment:'center' },
-      { text: bordado.valor_unit, style: 'tableHeader', fontSize: 10, margin: [0, 2, 0, 2], alignment:'center' },
-      { text: bordado.total_peca, style: 'tableHeader', fontSize: 10, margin: [0, 2, 0, 2], alignment:'center' },
+      { text: bordado.valor_unit.toFixed(2), style: 'tableHeader', fontSize: 10, margin: [0, 2, 0, 2], alignment:'center' },
+      { text: bordado.total_peca.toFixed(2), style: 'tableHeader', fontSize: 10, margin: [0, 2, 0, 2], alignment:'center' },
     ]
   })
 
